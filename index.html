@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Document</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        h1 {
+            font-size: 2em;
+            color: #555;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
         .text-button {
             background: none;
             border: none;
             padding: 0;
-            font-family: arial, sans-serif;
+            font-family: inherit;
+            color: #0066cc;
             text-decoration: underline;
             cursor: pointer;
         }
         .space-bottom {
-            margin-bottom: 20px; /* or however much space you want */
+            margin-bottom: 20px;
+        }
+        #hiddenText {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #eaeaea;
+            border-left: 3px solid #ccc;
         }
     </style>
     <script>
         function toggleText() {
             var x = document.getElementById("hiddenText");
             if (x.style.display === "none") {
-                x.style.display = "inline";
+                x.style.display = "block";
             } else {
                 x.style.display = "none";
             }
@@ -30,33 +61,17 @@
 
 <h1>2</h1>
 
-<ol>
-    <li>Pablo Larraín</li>
-    <li>Alejandro Iñárritu</li>
-    <li>Alfonso Cuarón</li>
-</ol>
+<p>Pablo Larraín, Alejandro Iñárritu, and Alfonso Cuarón are all from upper class backgrounds. Only Pablo Larraín is critical of organized politics and religion. Iñárritu and Cuarón not so much: but all are united by Dionysian elements in their work. How nature is the ultimate Dionysian force in "Revenant"! But what brings me here to journal was a remark at <a href="https://www.youtube.com/watch?v=BUzhuYTADoM">6:20/26:08</a> by Iñárritu:</p>
 
-<ul style="margin-left:23px;">
-    <li>They are all from upper class backgrounds</li>
-    <li>Only Pablo Larraín is critical of organized politics and religion</li>
-    <li>Iñárritu and Cuarón not so much: but all united by Dionysian elements in their work</li>
-    <li>How nature is the ultimate Dionysian force in Revenant!</li>
-    <li>But what brings me here to journal was a remark at <a href="https://www.youtube.com/watch?v=BUzhuYTADoM">6:20/26:08</a> by Iñárritu:</li>
-</ul>
+<p>Reason I got into this (Birdman) approach was the <button class="text-button" onclick="toggleText()">restrictions and limitations</button>. 
+    <span id="hiddenText" class="space-bottom">
+        <div>
+            <a href="https://www.gutenberg.org/cache/epub/37841/pg37841-images.html">Dancing in Chains</a>.—In the case of every Greek artist, poet, or writer we must ask: What is the new constraint which he imposes upon himself and makes attractive to his contemporaries, so as to find imitators? For the thing called “invention” (in metre, for example) is always a self-imposed fetter of this kind. “Dancing in chains”—to make that hard for themselves and then to spread a false notion that it is easy—that is the trick that they wish to show us. Even in Homer we may perceive a wealth of inherited formulæ and laws of epic narration, within the circle of which he had to dance, and he himself created new conventions for them that came after. This was the discipline of the Greek poets: first to impose upon themselves a manifold constraint by means of the earlier poets; then to invent in addition a new constraint, to impose it upon themselves and cheerfully to overcome it, so that constraint and victory are perceived and admired.
+        </div>
+    </span>
+</p>
 
-<ul style="margin-left:43px;">
-    <li>Reason I got into this (Birdman) approach was the <button class="text-button" onclick="toggleText()">restrictions and limitations</button> 
-    <span id="hiddenText" class="space-bottom" style="display:none;"><br>
-    <div id="hiddenContainer" class="hidden-container"><br><br>
-    <a href="https://www.gutenberg.org/cache/epub/37841/pg37841-images.html">Dancing in Chains</a>.—In the case of every Greek artist, poet, or writer we must ask: What is the new constraint which he imposes upon himself and makes attractive to his contemporaries, so as to find imitators? For the thing called “invention” (in metre, for example) is always a self-imposed fetter of this kind. “Dancing in chains”—to make that hard for themselves and then to spread a false notion that it is easy—that is the trick that they wish to show us. Even in Homer we may perceive a wealth of inherited formulæ and laws of epic narration, within the circle of which he had to dance, and he himself created new conventions for them that came after. This was the discipline of the Greek poets: first to impose upon themselves a manifold constraint by means of the earlier poets; then to invent in addition a new constraint, to impose it upon themselves and cheerfully to overcome it, so that constraint and victory are perceived and admired.
-    </span><br><br>
-    </div>
-    </li>
-    <li>Sometimes these are your best allies creatively speaking</li>
-    <li>Didn't have enough money, time, the St. James theater only allow 5 days for shooting</li>
-    <li>Coz they are booked for years but this window just happened to exist</li>
-    <li>We rehearsed every `rhythm`, measures from wall-to-wall, on a built set outside New York</li>
-</ul>
+<p>Sometimes these are your best allies creatively speaking. Didn't have enough money, time, the St. James theater only allowed 5 days for shooting because they are booked for years but this window just happened to exist. We rehearsed every `rhythm`, measures from wall-to-wall, on a built set outside New York.</p>
 
 </body>
 </html>
