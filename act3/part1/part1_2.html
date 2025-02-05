@@ -450,7 +450,7 @@ document.write(`
 </section>
 <section id="a-fractal-of-musical-cognition">
 <h2><strong>A Fractal of Musical Cognition</strong><a class="headerlink" href="#a-fractal-of-musical-cognition" title="Permalink to this heading">#</a></h2>
-<p>Ultimately, this visualization is more than a graph—it is a fractal of how harmony unfolds in both music and thought. The layers correspond to an understanding of how tonality is processed: from categorical modal identities, through points of functional tension, into a higher-dimensional space where notes exist less as discrete events and more as relational entities. This mirrors the way neural networks function, where lower layers process raw input (scales, fundamental pitches), while hidden layers extract patterns (tensions, resolutions), and final outputs determine movement through time.</p>
+<p>Ultimately, this visualization is more than a graph—it is a fractal of how harmony unfolds in both music and thought. The layers correspond to an understanding of how tonality is processed: from categorical modal identities, through points of functional tension, into a higher-dimensional space where notes exist less as discrete events and more as relational entities. This mirrors the way neural networks function, where lower layers process raw input (scales, fundamental pitches), while hidden layers extract patterns (tensions, resolutions), and final outputs determine movement through time (stacks).</p>
 <p>By mapping this progression onto a neural framework, this structure does not merely represent music; it embodies the process of musical cognition itself. In doing so, it invites deeper exploration into how harmonic relationships—whether in classical, jazz, or experimental music—mirror cognitive processes, forming a bridge between structured knowledge and emergent creativity.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -466,16 +466,16 @@ document.write(`
 <span class="c1"># Define the neural network fractal</span>
 <span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;World&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ionian&#39;</span><span class="p">,</span> <span class="s1">&#39;Lydian&#39;</span><span class="p">,</span> <span class="s1">&#39;Phrygian&#39;</span><span class="p">,</span> <span class="s1">&#39;Dorian&#39;</span><span class="p">,</span> <span class="s1">&#39;Locrian&#39;</span><span class="p">,</span> <span class="s1">&#39;Aeolian&#39;</span><span class="p">,</span> <span class="p">],</span> <span class="c1"># Veni; 95/5</span>
-        <span class="s1">&#39;Mode&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Mixolydian&#39;</span><span class="p">],</span> <span class="c1"># Vidi; 80/20</span>
-        <span class="s1">&#39;Agent&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;♯5&#39;</span><span class="p">,</span> <span class="s1">&#39;7th&#39;</span><span class="p">],</span> <span class="c1"># Vici; Veni; 51/49</span>
-        <span class="s1">&#39;Space&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;13th&#39;</span><span class="p">,</span> <span class="s1">&#39;11th&#39;</span><span class="p">,</span> <span class="s1">&#39;9th&#39;</span><span class="p">],</span> <span class="c1"># Vidi; 20/80</span>
-        <span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;♭13&#39;</span><span class="p">,</span> <span class="s1">&#39;♯11&#39;</span><span class="p">,</span>  <span class="s1">&#39;♯9&#39;</span><span class="p">,</span> <span class="s1">&#39;♭9&#39;</span><span class="p">,</span> <span class="s1">&#39;♭♭7&#39;</span><span class="p">]</span> <span class="c1"># Vici; 5/95</span>
+        <span class="s1">&#39;Suis&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ionian&#39;</span><span class="p">,</span> <span class="s1">&#39;Lydian&#39;</span><span class="p">,</span> <span class="s1">&#39;Phrygian&#39;</span><span class="p">,</span> <span class="s1">&#39;Dorian&#39;</span><span class="p">,</span> <span class="s1">&#39;Locrian&#39;</span><span class="p">,</span> <span class="s1">&#39;Aeolian&#39;</span><span class="p">,</span> <span class="p">],</span> <span class="c1"># Static</span>
+        <span class="s1">&#39;Voir&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Mixolydian&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;Choisis&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;♯5&#39;</span><span class="p">,</span> <span class="s1">&#39;7th&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;Deviens&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;13th&#39;</span><span class="p">,</span> <span class="s1">&#39;11th&#39;</span><span class="p">,</span> <span class="s1">&#39;9th&#39;</span><span class="p">],</span>  
+        <span class="s2">&quot;M&#39;èléve&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;♭13&#39;</span><span class="p">,</span> <span class="s1">&#39;♯11&#39;</span><span class="p">,</span>  <span class="s1">&#39;♯9&#39;</span><span class="p">,</span> <span class="s1">&#39;♭9&#39;</span><span class="p">,</span> <span class="s1">&#39;♭♭7&#39;</span><span class="p">]</span>  
     <span class="p">}</span>
 
 <span class="c1"># Assign colors to nodes</span>
 <span class="k">def</span> <span class="nf">assign_colors</span><span class="p">():</span>
-    <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># Dynamic</span>
         <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Mixolydian&#39;</span><span class="p">],</span>  
         <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Aeolian&#39;</span><span class="p">,</span> <span class="s1">&#39;7th&#39;</span><span class="p">,</span> <span class="s1">&#39;9th&#39;</span><span class="p">,</span> <span class="s1">&#39;♭♭7&#39;</span><span class="p">],</span>  
         <span class="s1">&#39;lightgreen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Locrian&#39;</span><span class="p">,</span> <span class="s1">&#39;11th&#39;</span><span class="p">,</span> <span class="s1">&#39;♭9&#39;</span><span class="p">,</span> <span class="s1">&#39;♯9&#39;</span><span class="p">,</span> <span class="s1">&#39;♯11&#39;</span><span class="p">],</span>  
@@ -521,7 +521,7 @@ document.write(`
         <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
         <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.2&quot;</span>
     <span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Modes, Emotions, Nodes&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Modes, Emotions, Nodes, Stacks&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c1"># Run the visualization</span>
@@ -531,7 +531,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/a7f13a681a1e3f5a2a6c8377bc41844e9247e2b2cd382c151f9e2329709c8b8f.png" src="../../_images/a7f13a681a1e3f5a2a6c8377bc41844e9247e2b2cd382c151f9e2329709c8b8f.png" />
+<img alt="../../_images/58abf1c225e6f76d5b0f86dee947653a4baf6684169304a6cb140517b7e8f44e.png" src="../../_images/58abf1c225e6f76d5b0f86dee947653a4baf6684169304a6cb140517b7e8f44e.png" />
 </div>
 </div>
 <figure class="align-default" id="id3">
